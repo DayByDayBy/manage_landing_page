@@ -7,7 +7,7 @@
   --clr-primary-400: hsl(228, 39%, 23%);
 
   --clr-neutral-900: hsl(232, 12%, 13%);
-  --clr-neutral-100: hsl(0 0% 0%);
+  --clr-neutral-100: hsl(0 0% 100%);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
   --ff-body: var(--ff-primary);
@@ -122,6 +122,9 @@ svg {
 .text-neutral-900 {
   color: var(--clr-neutral-900);
 }
+.text-neutral-100{
+  color: var(--clr-neutral-100);
+}
 
 .bg-primary-400 {
   background-color: var(--clr-primary-400);
@@ -184,6 +187,7 @@ svg {
     grid-auto-columns: 1fr;
   }
 }
+
 
 /* gen styling */
 
