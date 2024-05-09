@@ -128,12 +128,12 @@ body {
   color: var(--clr-primary-400);
 }
 
-p:not([class]){
+p:not([class]) {
   opacity: 0.7;
   max-width: 32ch;
 }
- 
-p[data-width="wide"]{
+
+p[data-width="wide"] {
   max-width: 42ch;
 }
 
@@ -190,7 +190,7 @@ p[data-width="wide"]{
   font-size: var(--fs-nav);
 }
 
-.nav-list{
+.nav-list {
   display: flex;
   gap: clamp(var(--size-400), 5vw, var(--size-700));
   font-weight: var(--fw-semi-bold);
@@ -205,7 +205,6 @@ p[data-width="wide"]{
 .nav-list a:focus {
   color: var(--clr-accent-400);
 }
-
 
 @media (max-width: 50em) {
   .primary-navigation {
@@ -234,7 +233,6 @@ p[data-width="wide"]{
     font-weight: var(--fw-bold);
   }
 
-  
   .primary-navigation[data-visible] {
     display: block;
   }
@@ -255,9 +253,32 @@ p[data-width="wide"]{
   }
 }
 
+/* cta */
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("images/bg-tablet-pattern.svg"),
+    url("images/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
 /* utility classes */
-
-
 
 .visually-hidden {
   position: absolute;
@@ -272,7 +293,6 @@ p[data-width="wide"]{
   border: 0 !important;
 }
 
-
 .container {
   --max-width: 1110px;
   --padding: 1rem;
@@ -280,28 +300,10 @@ p[data-width="wide"]{
   margin-inline: auto;
 }
 
-
-
-.push-right{
+.push-right {
   margin-left: auto;
 }
 
-.justify-self-end{
-  justify-self: end;
-}
-
-.vertical-align-center{
-  align-items: center;
-}
-
-
-/* .flow > * + * {
-outline: 3px solid lime;
-} */
-
-:where(.flow :not(:first-child)){
-  margin-top: var(--flow-spacer, 3em);
-}
 
 
 .even-columns {
@@ -316,6 +318,27 @@ outline: 3px solid lime;
   }
 }
 
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+@media (mind-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
+/* .flow > * + * {
+outline: 3px solid lime;
+} */
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
+}
 
 .text-primary-400 {
   color: var(--clr-primary-400);
@@ -393,4 +416,3 @@ outline: 3px solid lime;
     display: inline-flex;
   }
 }
-
