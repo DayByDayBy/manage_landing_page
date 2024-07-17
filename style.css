@@ -469,7 +469,7 @@ input:where([type="text"], [type="email"]) {
     position: relative;
     flex: 0 0 auto;
     background: var(--clr-neutral-200);
-    width: 40%;
+    width: 100%;
 }
 
 .slider-content{
